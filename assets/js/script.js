@@ -1,0 +1,5 @@
+// variables
+
+$(document).ready(function() {
+    
+})

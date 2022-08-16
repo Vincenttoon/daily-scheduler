@@ -36,7 +36,6 @@ $(document).ready(function() {
 
     // events
     // save button event
-    $('#seven').on('click', handleSaveTask);
     $('#eight').on('click', handleSaveTask);
     $('#nine').on('click', handleSaveTask);
     $('#ten').on('click', handleSaveTask);
@@ -48,6 +47,8 @@ $(document).ready(function() {
     $('#sixteen').on('click', handleSaveTask);
     $('#seventeen').on('click', handleSaveTask);
     $('#eighteen').on('click', handleSaveTask);
+    $('#nineteen').on('click', handleSaveTask);
+    $('#twenty').on('click', handleSaveTask);
 
     // runs on page load
     // populate textarea with local storage

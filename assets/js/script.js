@@ -8,9 +8,6 @@ $(document).ready(function() {
         // get the time
         let timeValue = $(this).parent().attr('data-time');
 
-        console.log(textValue);
-        console.log(timeValue);
-
         // save textarea to local storage
         localStorage.setItem(timeValue, textValue);
     }
@@ -19,7 +16,6 @@ $(document).ready(function() {
     function colorRows() {
         // current hour
         let currentHour = moment().hours();
-        console.log(currentHour);
         // loop through rows add color class based on time
         $('.row').each(function() {
             let rowHour = parseInt($(this).attr('data-time'));
@@ -52,7 +48,20 @@ $(document).ready(function() {
 
 
     // populate textarea with local storage
+    $("#hour-seven .task").val(localStorage.getItem("7"));
     $("#hour-eight .task").val(localStorage.getItem("8"));
+    $("#hour-nine .task").val(localStorage.getItem("9"));
+    $("#hour-ten .task").val(localStorage.getItem("10"));
+    $("#hour-eleven .task").val(localStorage.getItem("11"));
+    $("#hour-twelve .task").val(localStorage.getItem("12"));
+    $("#hour-thirteen .task").val(localStorage.getItem("13"));
+    $("#hour-fourteen .task").val(localStorage.getItem("14"));
+    $("#hour-fifteen .task").val(localStorage.getItem("15"));
+    $("#hour-sixteen .task").val(localStorage.getItem("16"));
+    $("#hour-seventeen .task").val(localStorage.getItem("17"));
+    $("#hour-eighteen .task").val(localStorage.getItem("18"));
+    $("#hour-nineteen .task").val(localStorage.getItem("19"));
+
 
     // loop through rows and add a class
     colorRows();

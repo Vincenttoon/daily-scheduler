@@ -30,7 +30,6 @@ $(document).ready(function() {
 
     }
 
-    // events
     // save button event for each individual save
     $('#seven').on('click', handleSaveTask);
     $('#eight').on('click', handleSaveTask);
@@ -47,7 +46,7 @@ $(document).ready(function() {
     $('#nineteen').on('click', handleSaveTask);
 
 
-    // populate textarea with local storage
+    // individual keys and values added back to local storage
     $("#hour-seven .task").val(localStorage.getItem("7"));
     $("#hour-eight .task").val(localStorage.getItem("8"));
     $("#hour-nine .task").val(localStorage.getItem("9"));

@@ -30,6 +30,10 @@ $(document).ready(function() {
 
     }
 
+        // get current day
+    let currentDate = moment().format('MMMM Do YYYY');
+    $("#currentDay").text(currentDate);
+
     // save button event for each individual save
     $('#seven').on('click', handleSaveTask);
     $('#eight').on('click', handleSaveTask);

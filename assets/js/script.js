@@ -34,13 +34,9 @@ $(document).ready(function() {
 
     }
 
-    function refreshStorage() {
-        let loadPage = JSON.parse(window.localStorage(timeValue));
-
-    }
-
     // events
     // save button event
+    $('#seven').on('click', handleSaveTask);
     $('#eight').on('click', handleSaveTask);
     $('#nine').on('click', handleSaveTask);
     $('#ten').on('click', handleSaveTask);
@@ -54,10 +50,9 @@ $(document).ready(function() {
     $('#eighteen').on('click', handleSaveTask);
     $('#nineteen').on('click', handleSaveTask);
 
-    // runs on page load
+
     // populate textarea with local storage
-
-
+    $("#hour-eight .task").val(localStorage.getItem("8"));
 
     // loop through rows and add a class
     colorRows();

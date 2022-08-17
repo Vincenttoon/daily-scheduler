@@ -34,6 +34,11 @@ $(document).ready(function() {
 
     }
 
+    function refreshStorage() {
+        let loadPage = JSON.parse(window.localStorage(timeValue));
+
+    }
+
     // events
     // save button event
     $('#eight').on('click', handleSaveTask);
@@ -48,10 +53,11 @@ $(document).ready(function() {
     $('#seventeen').on('click', handleSaveTask);
     $('#eighteen').on('click', handleSaveTask);
     $('#nineteen').on('click', handleSaveTask);
-    $('#twenty').on('click', handleSaveTask);
 
     // runs on page load
     // populate textarea with local storage
+
+
 
     // loop through rows and add a class
     colorRows();

@@ -27,7 +27,6 @@ $(document).ready(function() {
                 $(this).addClass('future');
             }
         })
-
     }
 
     // save button event for each individual save
@@ -61,9 +60,24 @@ $(document).ready(function() {
     $("#hour-eighteen .task").val(localStorage.getItem("18"));
     $("#hour-nineteen .task").val(localStorage.getItem("19"));
 
-    // button to clear local storage
-    $('clearBtn').on('click', localStorage.clear());
+    // !!!! HERE TO LINE 77 IS TEST FOR MULTI-FUNCTION BUTTON !!!!
+    let reloadPage = function() {
+        window.location.reload();
+    }
 
+    let clearHistory = function() {
+        $('clearBtn').on('click', localStorage.clear());
+    }
+    // // button to clear local storage
+    $(function() {
+        $('clearBtn').on('click', function() {
+            reloadPage();
+            clearHistory();
+        });
+    });
+    //!!!! END TEST FUNCTION, DELETE LATER !!!!
+
+    // // button to clear local storage
 
     // loop through rows and add a class
     colorRows();

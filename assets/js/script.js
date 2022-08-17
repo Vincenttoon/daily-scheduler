@@ -4,7 +4,7 @@ $(document).ready(function() {
     // functions
     function handleSaveTask() {
         // get the text
-        let textValue = $(this).siblings('task').val();
+        let textValue = $(this).siblings('.task').val();
         // get the time
         let timeValue = $(this).parent().attr('data-time');
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
         let currentHour = moment().hours();
         console.log(currentHour);
         // loop through rows add color class based on time
-        $('.js-row').each(function() {
+        $('.row').each(function() {
             let rowHour = parseInt($(this).attr('data-time'));
             if (rowHour < currentHour) {
                 $(this).addClass('past');

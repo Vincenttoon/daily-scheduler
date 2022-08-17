@@ -31,7 +31,7 @@ $(document).ready(function() {
     }
 
     // events
-    // save button event
+    // save button event for each individual save
     $('#seven').on('click', handleSaveTask);
     $('#eight').on('click', handleSaveTask);
     $('#nine').on('click', handleSaveTask);
@@ -61,6 +61,9 @@ $(document).ready(function() {
     $("#hour-seventeen .task").val(localStorage.getItem("17"));
     $("#hour-eighteen .task").val(localStorage.getItem("18"));
     $("#hour-nineteen .task").val(localStorage.getItem("19"));
+
+    // button to clear local storage
+    $('clearBtn').on('click', localStorage.clear());
 
 
     // loop through rows and add a class

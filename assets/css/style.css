@@ -75,3 +75,8 @@ body {
     justify-content: center;
     align-self: center;
   }
+
+  .clearBtn {
+    font-size: 40px;
+    border-radius: 10px;
+  }
